@@ -1,0 +1,33 @@
+{
+  "name": "bb-resolve",
+  "description": "Resove semver tags/branch names to refs on BitBucket repositiores",
+  "keywords": [
+    "bitbucket",
+    "resolve",
+    "git"
+  ],
+  "author": "Stephen Mathieson <me@stephenmathieson.com>",
+  "repository": "stephenmathieson/node-bb-resolve",
+  "dependencies": {
+    "basic-auth-header": "^1.0.0",
+    "debug": "^1.0.4",
+    "semver": "^3.0.1",
+    "sprintf": "^0.1.3",
+    "superagent": "^0.18.2"
+  },
+  "devDependencies": {
+    "better-assert": "^1.0.1",
+    "istanbul": "^0.3.0",
+    "mocha": "^1.21.3",
+    "node-netrc": "0.0.1"
+  },
+  "main": "index",
+  "bugs": {
+    "url": "https://github.com/stephenmathieson/node-bb-resolve/issues"
+  },
+  "homepage": "https://github.com/stephenmathieson/node-bb-resolve",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT"
+}
