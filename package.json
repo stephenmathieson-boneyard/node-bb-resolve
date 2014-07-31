@@ -7,7 +7,10 @@
     "git"
   ],
   "author": "Stephen Mathieson <me@stephenmathieson.com>",
-  "repository": "stephenmathieson/node-bb-resolve",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stephenmathieson/node-bb-resolve"
+  },
   "dependencies": {
     "basic-auth-header": "^1.0.0",
     "debug": "^1.0.4",
@@ -27,7 +30,11 @@
   },
   "homepage": "https://github.com/stephenmathieson/node-bb-resolve",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "version": "0.0.0",
+  "directories": {
+    "test": "test"
+  }
 }
