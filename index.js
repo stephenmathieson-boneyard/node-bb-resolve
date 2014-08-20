@@ -162,7 +162,9 @@ function sort(a, b) {
  */
 
 function error(repo, res) {
-  var err = new Error(sprintf('%s returned %d', repo.slug, res.status));
+  var msg = sprintf('%s returned %d', repo.slug, res.status);
+  if (401 == res.status) msg += ' (check your credentials)';
+  var err = new Error(msg);
   err.res = res;
   err.code = res.status;
   return err;

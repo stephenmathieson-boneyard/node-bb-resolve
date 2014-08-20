@@ -122,4 +122,13 @@ describe('resolve()', function () {
       });
     });
   });
+
+  describe('given a bad username/password', function () {
+    it('should', function (done) {
+      resolve(repo, 'stephenmathieson', 'notmypassword', function (err) {
+        assert(/credentials/.test(err.message));
+        done();
+      });
+    });
+  });
 });
