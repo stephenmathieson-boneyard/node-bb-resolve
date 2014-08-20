@@ -196,9 +196,10 @@ function headers(user, password) {
   var obj = {
     'user-agent': 'bb-resolve',
     accepts: 'application/json',
-    authorization: user && password ? basic(user, password) : '',
   };
   debug('headers: %j', obj);
+  // GH#2: don't display auth header with DEBUG=*
+  obj.authorization = user && password ? basic(user, password) : '';
   return obj;
 }
 
