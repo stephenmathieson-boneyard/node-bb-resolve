@@ -7,7 +7,7 @@ var debug = require('debug')('bb-resolve');
 var semver = require('semver');
 var request = require('superagent');
 var basic = require('basic-auth-header');
-var sprintf = require('sprintf');
+var fmt = require('util').format;
 
 /**
  * BitBucket API.
@@ -162,7 +162,7 @@ function sort(a, b) {
  */
 
 function error(repo, res) {
-  var msg = sprintf('%s returned %d', repo.slug, res.status);
+  var msg = fmt('%s returned %d', repo.slug, res.status);
   if (401 == res.status) msg += ' (check your credentials)';
   var err = new Error(msg);
   err.res = res;
@@ -180,7 +180,7 @@ function error(repo, res) {
  */
 
 function query(repo, type) {
-  return sprintf(api, repo.owner, repo.name, type);
+  return fmt(api, repo.owner, repo.name, type);
 }
 
 /**

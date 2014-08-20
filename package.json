@@ -15,7 +15,6 @@
     "basic-auth-header": "^1.0.0",
     "debug": "^1.0.4",
     "semver": "^3.0.1",
-    "sprintf": "^0.1.3",
     "superagent": "^0.18.2"
   },
   "devDependencies": {
