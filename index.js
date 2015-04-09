@@ -25,11 +25,11 @@ module.exports = resolve;
  * Resolve `repo@version` with `user:password`,
  * invoking `fn(err, ref)`.
  *
- * @api public
  * @param {String} repo
  * @param {String} user
  * @param {String} password
  * @param {Function} fn
+ * @api public
  */
 
 function resolve(repo, user, password, fn) {
@@ -69,11 +69,11 @@ function resolve(repo, user, password, fn) {
  * the given `repo` using `headers`.
  * Invokes `fn(err, tags)` when done.
  *
- * @api private
  * @param {Object} repo
  * @param {Object} headers
  * @param {String} type
  * @param {Function} fn
+ * @api private
  */
 
 function fetch(repo, headers, type, fn) {
@@ -94,10 +94,10 @@ function fetch(repo, headers, type, fn) {
 /**
  * To ref.
  *
- * @api private
  * @param {String} type
  * @param {String} version
  * @return {Object}
+ * @api private
  */
 
 function toRef(type, version) {
@@ -110,10 +110,10 @@ function toRef(type, version) {
 /**
  * Satisfy `version` with `refs`.
  *
- * @api private
  * @param {String} version
  * @param {Array} refs
  * @return {String}
+ * @api private
  */
 
 function satisify(version, refs) {
@@ -140,10 +140,10 @@ function satisify(version, refs) {
  * invalid versions (usually branches) at
  * the bottom.
  *
- * @api private
  * @param {String} a
  * @param {String} b
  * @return {Number}
+ * @api private
  */
 
 function sort(a, b) {
@@ -155,10 +155,10 @@ function sort(a, b) {
 /**
  * Create an error for `repo` and `res`.
  *
- * @api private
  * @param {Object} repo
  * @param {request.Response} res
  * @return {Error}
+ * @api private
  */
 
 function error(repo, res) {
@@ -173,10 +173,10 @@ function error(repo, res) {
 /**
  * Get a query for `repo` and `type`.
  *
- * @api private
  * @param {Object} repo
  * @param {String} type
  * @return {String}
+ * @api private
  */
 
 function query(repo, type) {
@@ -186,10 +186,10 @@ function query(repo, type) {
 /**
  * Get request headers for `user` and `password`.
  *
- * @api private
  * @param {String} user
  * @param {String} password
  * @return {Object}
+ * @api private
  */
 
 function headers(user, password) {
@@ -221,9 +221,9 @@ function headers(user, password) {
  *         slug: foo/bar@baz
  *       }
  *
- * @api private
  * @param {String} repo
  * @return {Object}
+ * @api private
  */
 
 function parse(repo) {
