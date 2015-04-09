@@ -11,6 +11,7 @@ test: node_modules
 
 node_modules: package.json
 	@npm install
+	@touch $@
 
 coverage: node_modules $(JS) $(TESTS)
 	@$(BIN)/istanbul cover $(BIN)/_mocha -- --reporter $(REPORTER)
